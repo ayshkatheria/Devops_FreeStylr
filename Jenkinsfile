@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('source') {
             steps {
-               git 'https://github.com/sd031/aws_codebuild_codedeploy_nodeJs_demo.git'
+               git 'https://github.com/ayshkatheria/Devops_FreeStylr.git'
                sh 'cat index.js'
             }
             
@@ -23,7 +23,7 @@ pipeline {
             
             steps {
              echo NODE_ENV
-             withCredentials([string(credentialsId: 'e8f8ff88-49e0-433a-928d-36a518cd30d6', variable: 'secver')]) {
+             withCredentials([string(credentialsId: '914bb665-bc58-479f-8a8a-b0e815ff23da', variable: 'SecretVariable')]) {
                 // some block
                 echo secver
             }
