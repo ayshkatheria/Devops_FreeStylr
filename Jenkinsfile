@@ -25,7 +25,7 @@ pipeline {
              echo NODE_ENV
              withCredentials([string(credentialsId: '914bb665-bc58-479f-8a8a-b0e815ff23da', variable: 'SecretVariable')]) {
                 // some block
-                echo secver
+                echo SecretVariable
             }
                          sh 'npm install'
             }
